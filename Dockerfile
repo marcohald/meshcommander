@@ -1,4 +1,4 @@
-FROM node:latest
+FROM arm32v7/node:latest
 LABEL maintainer "Volker Gaibler <volker.gaibler@h-its.org>"
 
 ENV DEBIAN_FRONTEND noninteractive
