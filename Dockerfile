@@ -18,7 +18,9 @@ RUN mkdir /meshcommander \
     && cd MeshCommander/NodeJS \
     && npm install
 
+RUN sed -i -- 's/127.0.0.1/0.0.0.0/g' /meshcommander/MeshCommander/NodeJS/webserver.js
+
 EXPOSE 3000
 
 WORKDIR /meshcommander/MeshCommander/NodeJS/
-CMD ["node", "commander.js"]
+CMD ["node", "meshcommander.js"]
