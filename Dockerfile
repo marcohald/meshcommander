@@ -36,6 +36,8 @@ RUN mkdir /meshcommander \
 
 RUN sed -i -- 's/127.0.0.1/0.0.0.0/g' /meshcommander/MeshCommander/NodeJS/webserver.js
 
+RUN [ "cross-build-end" ] 
+
 EXPOSE 3000
 
 WORKDIR /meshcommander/MeshCommander/NodeJS/
